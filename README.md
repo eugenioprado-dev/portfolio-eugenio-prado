@@ -1,32 +1,56 @@
-# React + TypeScript + Vite
+﻿# Eugênio Prado — Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfólio comercial com React, TypeScript, Vite, Tailwind CSS 4 e React Icons. A rodada de refinamento preserva a identidade escura, o verde, o monograma e a ordem das seções. Sem novas dependências, backend ou banco de dados.
 
-Currently, two official plugins are available:
+## Desenvolvimento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev`: servidor local.
+- `npm run lint`: Oxlint.
+- `npm run build`: TypeScript e build em `dist/`.
+- `npm run preview`: prévia do build.
 
-## React Compiler
+## Conteúdo e configuração
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/constants/site.ts`: WhatsApp, LinkedIn e GitHub oficiais.
+- `src/constants/projects.ts`: cases, links ao vivo, dimensões e enquadramento de cada screenshot.
+- `src/types/project.ts`: contrato dos cases. Para incluir gastronomia, agendamento ou sistemas, adicione um objeto ao array; não é necessário alterar a renderização.
+- `src/constants/content.ts`: serviços, tecnologias e etapas.
+- `src/components/ui/QuoteLink.tsx`: CTA compartilhado de orçamento.
+- `src/sections/`: seções da página.
+- `src/index.css`: tokens, layout, breakpoints e microinterações.
+- `src/hooks/useReveal.ts`: reveal com IntersectionObserver.
 
-## Expanding the Oxlint configuration
+Todos os CTAs “Solicitar orçamento” abrem o WhatsApp com a mensagem:
+“Olá, Eugênio! Vi seu portfólio e gostaria de conversar sobre um projeto.”
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+A mensagem usa encodeURIComponent. Nenhuma mensagem é enviada automaticamente. Links externos abrem em outra aba com noopener e noreferrer. LinkedIn e GitHub também estão no footer.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Os screenshots e o texto “Ver projeto ao vivo” pertencem ao mesmo link de cada case, evitando alvos duplicados na navegação por teclado. Os repositórios individuais permanecem null, pois não foram fornecidos.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Screenshots originais
+
+Os arquivos foram preservados, sem filtros ou reprocessamento:
+
+| Projeto | Resolução | Avaliação |
+| --- | --- | --- |
+| André Dias Studio | 1899 × 909 | Boa definição para a área de preview |
+| Aura | 1903 × 911 | Boa definição para a área de preview |
+| Loja Bella | 400 × 250 | Limitada ao ampliar; recomenda-se nova captura em maior resolução |
+
+A moldura usa uma área 16:9, object-fit cover e imagePosition configurável por projeto. O recorte prioriza o topo e o conteúdo central. As imagens têm dimensões intrínsecas, lazy loading e decoding assíncrono.
+
+André Dias Studio é projeto real. Aura e Loja Bella permanecem identificados como demonstrativos.
+
+## Verificação
+
+Com o servidor local rodando, execute `node scripts/verify-browser.mjs`. Usa o Chrome headless instalado, sem dependências novas. Configure `BROWSER_PATH` ou `PORTFOLIO_URL` se necessário.
+
+Verifica 320, 375, 425, 768, 1024 e 1440 px, overflow, imagens carregadas, âncoras, atributos de links externos, mensagem e número do WhatsApp, foco dos cases, menu, Escape, movimento reduzido, reveal e erros de execução. As capturas são salvas em diretório temporário informado pelo script.
+
+A rodada passou com lint e build sem erros ou avisos, sem overflow e sem erros de console. Os três sites e o GitHub responderam HTTP 200. O LinkedIn retornou 999 ao acesso automatizado; a URL fornecida foi preservada e pode ser conferida manualmente no navegador.
+
+## Antes de publicar
+
+- Recomenda-se substituir apenas quando disponível a captura da Loja Bella por uma de maior resolução (por exemplo, 1600 px de largura).
+- Após definir o domínio, configurar canonical, og:url e imagem de compartilhamento absoluta, se desejado.
+- Nenhum commit, push ou deploy foi realizado.
