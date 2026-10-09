@@ -23,4 +23,11 @@ export const projects: Project[] = [
     highlights: ['Layout responsivo', 'Apresentação comercial', 'Produtos em destaque', 'WhatsApp e presença digital'],
     url: 'https://loja-bella-essencial.vercel.app/', github: null, imageWidth: 400, imageHeight: 250, imagePosition: '50% 0%',
   },
+  {
+    id: 'brasa-73', name: 'BRASA 73 — Burger & Grill', category: 'Hamburgueria', context: 'Projeto demonstrativo',
+    description: 'Catálogo digital para hamburgueria com busca, filtros por categoria, personalização de produtos, carrinho persistente e geração estruturada do pedido para WhatsApp.',
+    image: '/projects/brasa-73.png', technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    highlights: ['Catálogo digital', 'Busca', 'Filtros por categoria', 'Personalização de produtos', 'Carrinho', 'Persistência local', 'Pedido via WhatsApp', 'Design responsivo'],
+    url: 'https://brasa-73.vercel.app/', github: null, imageWidth: 1901, imageHeight: 1077, imagePosition: '50% 0%',
+  },
 ]
