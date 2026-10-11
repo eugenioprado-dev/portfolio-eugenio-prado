@@ -7,11 +7,11 @@ const technologyIcons = [FiMonitor, FiCode, FiDatabase, FiTool]
 
 export function Services() {
   return <section id="servicos" className="section section-surface" tabIndex={-1} aria-label="Serviços"><div className="container">
-    <SectionHeading number="02" label="O que posso construir" title="O próximo passo do seu negócio." description="Da primeira presença online a uma solução personalizada. O ponto de partida é entender o que você precisa." />
+    <SectionHeading number="02" label="O que posso construir" title="Vamos encontrar a solução ideal para o seu negócio" description="Cada projeto possui necessidades diferentes. Vamos conversar sobre sua ideia e entender qual solução faz mais sentido para o seu negócio." />
     <div className="services-grid">{services.map((service, index) => { const Icon = serviceIcons[index]; return <article className="service-card" key={service.title} data-reveal><Icon className="service-icon" aria-hidden="true" /><h3>{service.title}</h3><p>{service.description}</p><span>{service.detail}</span></article> })}
-      <div className="service-cta" data-reveal><p className="eyebrow">Vamos encontrar o caminho</p><h3>Cada negócio tem seu momento.</h3><p>O escopo e o investimento são definidos a partir da sua necessidade.</p><QuoteLink /></div>
+      <div className="service-cta" data-reveal><p className="eyebrow">Vamos encontrar o caminho</p><h3>Cada negócio tem seu momento.</h3><p>Vamos entender sua ideia e definir juntos o que o seu projeto precisa.</p><QuoteLink label="Conversar sobre meu projeto" /></div>
     </div>
-    <div className="service-pricing" data-reveal><div><p>Projetos a partir de <strong>R$ 600</strong></p><span>O investimento final varia conforme o escopo e as funcionalidades do projeto.</span></div><QuoteLink /></div>
+    <div className="service-pricing" data-reveal><div><p>Sua ideia pode se tornar um <strong>projeto real.</strong></p><span>Conte sobre seu negócio e o que você deseja construir.</span></div><QuoteLink label="Conversar sobre meu projeto" /></div>
   </div></section>
 }
 export function Technologies() {
@@ -26,6 +26,6 @@ export function Process() {
 }
 export function About() {
   return <section id="sobre" className="section container about" tabIndex={-1} aria-labelledby="about-title"><div data-reveal><p className="eyebrow"><span>05 /</span> Por trás do trabalho</p><h2 id="about-title">Tecnologia com propósito.<br /><em>Olhar para pessoas.</em></h2><div className="about-signature">Eugênio Prado<span>Desenvolvedor Web</span></div></div>
-    <div className="about-copy" data-reveal><p>Sou Eugênio Prado, estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e desenvolvedor focado na criação de experiências web modernas e funcionais.</p><p>Desenvolvo projetos front-end utilizando React, TypeScript e Tailwind CSS, além de estudar e desenvolver soluções com C#, .NET e bancos de dados.</p><p>Meu foco é transformar necessidades de negócios em interfaces organizadas, responsivas e fáceis de usar. Aprender continuamente faz parte de como construo e evoluo cada projeto.</p><div className="about-note"><span /> Atenção ao visual. Cuidado com a experiência.</div></div>
+    <div className="about-copy" data-reveal><p>Sou Eugênio Prado. <strong>Desenvolvo experiências digitais para transformar ideias em projetos reais.</strong></p><p>Crio sites e aplicações web com foco em identidade visual, experiência do usuário e soluções que façam sentido para cada negócio. Meus projetos passam por diferentes segmentos, desde sites institucionais até catálogos digitais e sistemas com gerenciamento de conteúdo.</p><p>Já desenvolvi projetos voltados para beleza e bem-estar, moda, gastronomia e serviços, com atenção a interfaces organizadas, responsivas e fáceis de usar.</p><div className="about-note"><span /> Atenção ao visual. Cuidado com a experiência.</div></div>
   </section>
 }

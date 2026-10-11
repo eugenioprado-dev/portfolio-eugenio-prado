@@ -122,7 +122,7 @@ try {
     return document.querySelectorAll('.reveal-pending').length
   })()`)
   console.log(JSON.stringify({ results, runtimeErrors: errors, unrevealedAfterScroll: reveal }, null, 2))
-  const failed = errors.length || reveal || results.some(r => r.invalidExternalLinks || !r.whatsappValid || !r.reducedMotion || !r.projectKeyboard || r.projectLinks !== 3 || r.images.length !== 3 || r.images.some(img => !img.loaded) || r.missingImages || r.overflow.length || r.brokenAnchors.length || r.h1 !== 1 || r.demos !== 2 || r.pageWidth > r.width || r.menuOpen === false || r.escape === false || r.navigation === false)
+  const failed = errors.length || reveal || results.some(r => r.invalidExternalLinks || !r.whatsappValid || !r.reducedMotion || !r.projectKeyboard || r.projectLinks !== 4 || r.images.length !== 4 || r.images.some(img => !img.loaded) || r.missingImages || r.overflow.length || r.brokenAnchors.length || r.h1 !== 1 || r.demos !== 3 || r.pageWidth > r.width || r.menuOpen === false || r.escape === false || r.navigation === false)
   if (failed) process.exitCode = 1
   await send('Browser.close')
 } finally {
