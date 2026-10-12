@@ -25,7 +25,13 @@ Todos os CTAs “Solicitar orçamento” abrem o WhatsApp com a mensagem:
 
 A mensagem usa encodeURIComponent. Nenhuma mensagem é enviada automaticamente. Links externos abrem em outra aba com noopener e noreferrer. LinkedIn e GitHub também estão no footer.
 
-Os screenshots e o texto “Ver projeto ao vivo” pertencem ao mesmo link de cada case, evitando alvos duplicados na navegação por teclado. Os repositórios individuais permanecem null, pois não foram fornecidos.
+Os screenshots e o texto “Ver projeto ao vivo” pertencem ao mesmo link de cada case, evitando alvos duplicados na navegação por teclado. Links de repositório não confirmados permanecem null. Patas & Cia também mantém github: null para exibir somente o link ao vivo, sem seção de código.
+
+## Case Patas & Cia
+
+Os projetos de `src/constants/projects.ts` são ordenados alfabeticamente pelo nome, usando a localização `pt-BR`. Patas & Cia inclui conteúdo completo no campo opcional `details`, apresentado em uma área expansível nativa no card compartilhado. Não há página ou modal individual. A classificação como projeto demonstrativo segue a identificação exibida na própria captura do site.
+
+A capa utiliza a captura disponível em `public/projects/patas-e-cia.png` (1904 × 1079), com enquadramento no topo e o mesmo tratamento dos demais projetos. Não há pendência de imagem.
 
 ## Screenshots originais
 

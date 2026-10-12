@@ -531,6 +531,33 @@ h2{
   font-size:11px;
   color:var(--muted)
 }
+.project-details{
+  border-top:1px solid var(--line);
+  margin-top:22px;
+  padding-top:17px;
+  font-size:13px;
+  line-height:1.8;
+  color:var(--muted)
+}
+.project-details summary{
+  cursor:pointer;
+  color:var(--accent);
+  font-weight:600
+}
+.project-details summary:hover{
+  text-decoration:underline;
+  text-underline-offset:5px
+}
+.project-details h4{
+  margin:22px 0 8px;
+  color:var(--text);
+  font-size:13px;
+  font-weight:500
+}
+.project-details ul{
+  list-style:disc;
+  padding-left:20px
+}
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));

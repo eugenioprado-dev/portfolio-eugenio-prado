@@ -35,6 +35,17 @@ export function Projects() {
         <h3>{project.name}</h3><p className="project-description">{project.description}</p>
         <ul className="highlights">{project.highlights.map(item => <li key={item}>{item}</li>)}</ul>
         <ul className="tags" aria-label="Tecnologias do projeto">{project.technologies.map(tech => <li key={tech}>{tech}</li>)}</ul>
+        {project.details && <details className="project-details">
+          <summary>Ver case completo<span className="sr-only"> de {project.name}</span></summary>
+          <h4>Problema</h4><p>{project.details.problem}</p>
+          <h4>Solução</h4><p>{project.details.solution}</p>
+          <h4>Principais funcionalidades</h4>
+          <ul>{project.details.features.map(item => <li key={item}>{item}</li>)}</ul>
+          <h4>Backend e segurança</h4>
+          <ul>{project.details.security.map(item => <li key={item}>{item}</li>)}</ul>
+          <h4>Deploy</h4><p>{project.details.deployment}</p>
+          <h4>Resultado</h4><p>{project.details.result}</p>
+        </details>}
         {project.github && <div className="project-links"><a href={project.github} target="_blank" rel="noopener noreferrer" className="text-link"><FiGithub aria-hidden="true" /> {project.id === 'brasa-73' ? <>Ver código no GitHub<span className="sr-only"> (nova aba)</span></> : <>Código<span className="sr-only"> no GitHub (nova aba)</span></>}</a></div>}
       </div>
     </article>)}</div>
